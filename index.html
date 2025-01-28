@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Joastify Js-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
+    <!--Css-->
+    <link rel="stylesheet" href="assets/styles/output.css">
+    <!--Script Joastify-->
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--Script Js-->
+    <script defer src="assets/js/script.js"></script>
+    <title>TopBurger - O hambúrguer mais delicioso da cidade</title>
+</head>
+<body>
+    <!--Header-->
+    <header class="w-full h-[360px] bg-home bg-cover bg-center" style="background-image: url('assets/images/bg.png');">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img 
+                src="assets/images/beef-burger.jpg" 
+                alt="Logo TopBurger"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            >
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">TopBurger</h1>
+            <span class="text-white font-medium">Rua Central 80, Centro, Cidade de Deus - RJ</span>
+            <div class="bg-red-500 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg a Sáb - 18:00 as 23:00</span>
+            </div>
+        </div>
+    </header>
+    <!--End header-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nossas opções</h2>
+
+    <!--Menu-->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-6 mb-16">
+            <!--Product 1-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/beef-burger.jpg" 
+                    alt="Hambúrguer de carne"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Hambúrguer de Carne</p>
+                        <p class="text-sm">Pão com gergelim, hambúrguer de carne 250g, queijo prato e salada</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer de Carne"
+                            data-price="18.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+
+            <!--Product 2-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/chicken-burger.jpg" 
+                    alt="Hambúrguer de frango"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Hambúrguer de Frango</p>
+                        <p class="text-sm">Pão com gergelim, hambúrguer de frango 250g, queijo prato e salada</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 20.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer de Frango"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+
+            <!--Product 3-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/burger.jpg" 
+                    alt="Hambúrguer Vegano"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Hambúrguer Vegano</p>
+                        <p class="text-sm">Pão com gergelim, hambúrguer vegano 250g, queijo prato vegano e salada</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 22.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer de Bacon"
+                            data-price="22.00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+
+            <!--Product 4-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/double-beef.jpg" 
+                    alt="Hambúrguer duplo de carne"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Hambúrguer Duplo de Carne</p>
+                        <p class="text-sm">Pão com gergelim, 2 hambúrgueres de carne 250g, queijo prato e salada</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 24.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer duplo de carne"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 5-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/triple-burger.jpg" 
+                    alt="Hambúrguer Triplo de carne"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Hambúrguer Triplo de Carne</p>
+                        <p class="text-sm">Pão com gergelim, 3 hambúrgueres de carne 250g, queijo prato e salada</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 29.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer duplo de carne"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 6-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/double-combo.jpg" 
+                    alt="Combo duplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Combo Duplo</p>
+                        <p class="text-sm">Combo 3 hambúrgueres duplos de carne com queijo e salada especial</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 39.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer duplo de carne"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 7-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/super-combo.jpg" 
+                    alt="Combo Triplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Combo Triplo</p>
+                        <p class="text-sm">Combo 3 hambúrgueres duplos de carne com queijo e salada especial</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 49.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer duplo de carne"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 8-->
+            <div class="flex gap-2">
+                <img 
+                    src="assets/images/triple-combo.jpg" 
+                    alt="Combo Triplo com Fritas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="flex justify-between flex-col">
+                    <div>
+                        <p class="font-bold">Combo Triplo com Fritas</p>
+                        <p class="text-sm">Combo 3 hambúrgueres artesanal com fritas, salada e molho especial</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 52.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Hambúrguer duplo de carne"
+                            data-price="20.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl text-center">
+                Bebidas
+            </h2>
+        </div>
+        <!--Drink area-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-6 mt-8 mb-16" id="menu">
+              <!--Product 1-->
+              <div class="flex gap-2 w-full">
+                <img 
+                    src="assets/images/coca-cola.png" 
+                    alt="Refrigerante coca-cola em lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="w-full flex justify-between flex-col">
+                    <p class="font-bold">Coca-cola Lata</p>
+                    <p class="text-sm">Coca-cola lata 350ml</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Coca-cola lata"
+                            data-price="5.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 2-->
+            <div class="flex gap-2 w-full">
+                <img 
+                    src="assets/images/guarana.png" 
+                    alt="Refrigerante guaraná em lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="w-full flex justify-between flex-col">
+                    <p class="font-bold">Guaraná Lata</p>
+                    <p class="text-sm">Guaraná lata 350ml</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Guaraná lata"
+                            data-price="5.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+              <!--Product 3-->
+              <div class="flex gap-2 w-full">
+                <img 
+                    src="assets/images/fanta-laranja.png" 
+                    alt="Refrigerante fanta laranja em lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="w-full flex justify-between flex-col">
+                    <p class="font-bold">Fanta Laranja</p>
+                    <p class="text-sm">Fanta laranja lata 350ml</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Fanta laranja lata"
+                            data-price="5.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+            <!--Product 4-->
+            <div class="flex gap-2 w-full mb-80">
+                <img 
+                    src="assets/images/fanta-uva.png" 
+                    alt="Refrigerante fanta uva"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+                <div class="w-full flex justify-between flex-col">
+                    <p class="font-bold">Fanta Uva</p>
+                    <p class="text-sm">Fanta uva lata 350ml</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.99</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-button"
+                            data-name="Fanta uva lata"
+                            data-price="5.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End product-->
+        </div>
+        <!--End drink area-->
+    </div>
+    <!--End menu-->
+    <!--Modal cart-->
+    <div 
+        class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+        id="cart-modal"
+    >
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            <p class="font-bold mt-4 mb-2">Endereço de entrega:</p>
+            <input 
+                type="text"
+                placeholder="Digite seu endereço completo..."    
+                id="address-input"
+                class="w-full border-2 p-1 rounded my-1"
+            >
+            <p class="text-red-500 hidden" id="address-warn-input">Digite seu endereço completo!</p>
+            <div class="flex items-center justify-between mt-6 w-full">
+                <button class="font-bold text-red-700" id="cart-close-button">Fechar</button>
+                <button id="cart-checkout-button" class="bg-green-500 text-white px-4 py-2 rounded font-bold">Finalizar pedido</button>
+            </div>
+        </div>
+    </div>
+    <!--Button cart-->
+    <footer class="w-full bg-red-500 py-4 fixed bottom-0 z-10 flex items-center justify-center">
+        <button 
+            class="flex items-center gap-2 text-white font-bold"
+            id="cart-button"
+        >
+            (<span id="cart-counter">0</span>)
+            Ver meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+</body>
+</html>
